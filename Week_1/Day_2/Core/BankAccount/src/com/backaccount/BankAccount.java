@@ -33,14 +33,14 @@ public class BankAccount {
     }
 
     // METHODS
-    // Deposit method
+    // deposit methods
     public void deposit(String accountType, double amount) {
         if (accountType.equalsIgnoreCase("checking")) {
             checkingBalance += amount;
         } else if (accountType.equalsIgnoreCase("savings")) {
             savingsBalance += amount;
         }
-        totalMoney += amount; // Add to total money
+        totalMoney += amount;
     }
 
     // Withdraw method
@@ -56,17 +56,17 @@ public class BankAccount {
         }
     }
 
-    // Get balance method
+    // balance method
     public void getBalance() {
         double totalBalance = checkingBalance + savingsBalance;
-        System.out.println("Account Number: " + accountNumber);
-        System.out.println("Checking Balance: $" + checkingBalance);
+        System.out.println("Account ID: " + accountNumber);
+        System.out.println("Check Balance: $" + checkingBalance);
         System.out.println("Savings Balance: $" + savingsBalance);
         System.out.println("Total Balance: $" + totalBalance);
     }
 
-    // Private method to generate random 10-digit account number
+    // Method to generate Id
     private String generateAccounts() {
-        return String.valueOf((long) (Math.random() * 10000000000L));
+        return String.valueOf((long) (Math.random() * 100000L));
     }
 }

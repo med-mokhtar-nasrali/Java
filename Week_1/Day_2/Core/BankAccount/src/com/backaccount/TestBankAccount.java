@@ -2,13 +2,13 @@ package com.backaccount;
 
 public class TestBankAccount {
 
-	public static void main(String[] args) {
-        //Create bank accounts instances
+    public static void main(String[] args) {
+        // create bank user instances
         BankAccount user1 = new BankAccount();
         BankAccount user2 = new BankAccount();
         BankAccount user3 = new BankAccount();
 
-        //Deposit Test
+        // deposit test
         user1.deposit("Check", 800);
         user1.deposit("Check", 500);
         user1.deposit("Savings", 300);
@@ -16,24 +16,24 @@ public class TestBankAccount {
         user3.deposit("Savings", 10);
         user3.deposit("Savings", 600);
 
-        //Display balances after deposits
+        // balances after deposit
         user1.getBalance();
         user2.getBalance();
         user3.getBalance();
 
-        //Withdrawal Test
+        // withdraw test
         user1.withdraw("Check", 1200);
         user1.withdraw("Check", 50);
         user1.withdraw("Check", 200);
         user2.withdraw("Savings", 780);
         user2.withdraw("Savings", 180);
 
-        //Display balances after withdrawals
+        // balances after withdraw
         user1.getBalance();
         user2.getBalance();
         user3.getBalance();
 
-        //Static method test
+        // method test
         System.out.println("Total Accounts: " + BankAccount.getAccounts());
         System.out.println("Total Money in Bank: $" + BankAccount.getTotalMoney());
     }
