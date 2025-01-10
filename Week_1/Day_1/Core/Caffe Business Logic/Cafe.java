@@ -58,15 +58,11 @@ public class Cafe {
 
     // Add multiple customers
     public void addCustomers(ArrayList<String> customers) {
-        System.out.println("Enter customer names. Type 'q' to quit:");
+        System.out.println("Enter customer names:");
         while (true) {
             String name = System.console().readLine();
-            if (name.equals("q")) {
-                break;
-            }
             customers.add(name);
             System.out.println("Added: " + name);
         }
-        System.out.println("Final Customer List: " + customers);
     }
 }
